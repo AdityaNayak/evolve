@@ -1,0 +1,124 @@
+// --------------------------------------------------
+// Your module
+// --------------------------------------------------
+
+.button{
+  border-bottom:3px solid scale-color($button-background, $lightness: -30%);
+  // text-transform: uppercase;
+  // font-weight:bold;
+  border-radius: 3px;
+  &.success{
+    border-bottom:3px solid scale-color($success-color, $lightness: -30%);
+    
+  }
+  &.xlarge{
+    font-size: 1.4rem;
+  }
+  &:hover, &:focus{
+      margin-top: -1px;
+  }
+  &.white{
+    background: #fff;
+    border-bottom:3px solid scale-color(#fff, $lightness: -30%);
+    color: #333;
+  }
+}
+.btn{
+  color: $button-background;
+  text-transform:uppercase;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:14px;
+  padding:$button-padding;
+  &:hover, &:focus{
+    color:$button-background-hover;
+    margin-top: -1px;
+  }
+  &.disabled{
+    color: $light-gray;
+    cursor: default;
+    &:hover, &:focus{
+      color: $light-gray;
+    }
+  }
+
+}
+
+.ibtn{
+  color: $button-background;
+  text-transform:uppercase;
+  cursor:pointer;
+  font-weight:bold;
+  // font-size:emCalc(14px);
+  font-size: 14px;  
+  // padding:$button-padding;
+  &:hover, &:focus{
+    color:$button-background-hover;
+    margin-top: -1px;
+  }
+  &.disabled{
+    color: $light-gray;
+    cursor: default;
+    &:hover, &:focus{
+      color: $light-gray;
+    }
+  }
+  &.block{
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+ol,div,li,span,a,p,h2,h3,h4,strong {
+  &::before,&::after{
+  content:none;
+  }
+}
+
+.note{
+
+  background: $light-gray;
+  border-radius: $global-radius;
+  border:1px solid #eee;
+  padding:0.5em 0.75em;
+
+  &::before{
+    content: " ";
+    display: block;
+    background: url("../img/bookmark.png") no-repeat;
+    background-size:contain;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: 6px 6px 0 -48px;
+  }
+}
+
+.callout{
+  &.hv{
+    transition: background 0.25s;
+    &:hover, &:focus{
+      @extend .llgbg;
+      transition: background 0.25s;
+      // border-right:1px solid #eee;
+      margin-top: -1px;
+      border-bottom: 4px solid #eee;
+    }
+  }
+  &.b{
+    border:1px solid #eee; 
+    border-bottom: 3px solid #eee; 
+    border-radius: 5px;
+  }
+}
+.hvg{
+  &:hover, &:focus{
+    @extend .llgbg;
+    margin-top: -1px;
+  }
+}
