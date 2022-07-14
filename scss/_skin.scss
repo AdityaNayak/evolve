@@ -122,3 +122,13 @@ ol,div,li,span,a,p,h2,h3,h4,strong {
     margin-top: -1px;
   }
 }
+p,ol,ul{
+  font-size: 1.2em;
+}
+
+.trg2{
+  margin-top: -9em;
+}
+@include breakpoint(small only) {
+  .trg2{margin-top:0 !important;}
+}
